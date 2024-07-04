@@ -1,90 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
     <title>Product Page</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="loader"></div>
-    
+
     <div id="warning-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="warning-message"></p>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="warning-message"></p>
+      </div>
+    </div>
+
+    <div id="container" style="display: none">
+      <div id="left-container">
+        <div id="pics-container">
+          <div id="main-img-container">
+            <img id="main-img" src="./pics/img1.png" alt="Product Image" />
+          </div>
+          <div id="sub-img-container">
+            <img class="thumbnail" src="./pics/img2.png" alt="Product Image" />
+            <img class="thumbnail" src="./pics/img3.png" alt="Product Image" />
+            <img class="thumbnail" src="./pics/img4.png" alt="Product Image" />
+            <img class="thumbnail" src="./pics/img5.png" alt="Product Image" />
+          </div>
         </div>
-    </div>    
-    
-    <div id="container" style="display: none;">
-        <div id="left-container">
-            <div id="pics-container">
-                <div id="main-img-container">
-                    <img id="main-img" src="./pics/img1.png" alt="Product Image">
-                </div>
-                <div id="sub-img-container">
-                    <img class="thumbnail" src="./pics/img2.png" alt="Product Image">
-                    <img class="thumbnail" src="./pics/img3.png" alt="Product Image">
-                    <img class="thumbnail" src="./pics/img4.png" alt="Product Image">
-                    <img class="thumbnail" src="./pics/img5.png" alt="Product Image">
-                </div>
-            </div>
+      </div>
+
+      <div id="right-container">
+        <div id="product-container">
+          <div id="vendor"></div>
+          <div id="product"></div>
         </div>
 
-        <div id="right-container">
-            <div id="product-container">
-                <div id="vendor"></div>
-                <div id="product"></div>
-            </div>
+        <hr />
 
-            <hr>
-
-            <div id="price-container">
-                <div id="price-left">
-                    <div id="new-price-d">$<span id="new-price"></span> </div>
-                    <div id="old-price-d">$<span id="old-price"></span></div>
-                </div>
-                <p id="offer-percentage"> <span id="offer"></span>% Off</p>
-            </div>
-
-            <hr>
-
-            <div id="color-container">
-                <div id="color-title">Choose a Color</div>
-                <div id="color-selects"></div>
-            </div>
-
-            <hr>
-
-            <div id="size-container">
-                <div id="size-title">Choose a Size</div>
-                <div id="size-selects"></div>
-            </div>
-
-            <div id="cart-container">
-                <div class="counter">
-                    <span id="decrease">-</span>
-                    <input type="number" id="quantity-input" value="1" min="1">
-                    <span id="increase">+</span>
-                </div>
-                <button id="add-to-cart">Add To Cart</button>
-            </div>
-
-            <div id="notification" style="display: none;"></div>
-
-            <hr>
-
-            <div id="description-container">
-                <div id="description"></div>
-            </div>
+        <div id="price-container">
+          <div id="price-left">
+            <div id="new-price-d">$<span id="new-price"></span></div>
+            <div id="old-price-d">$<span id="old-price"></span></div>
+          </div>
+          <p id="offer-percentage"><span id="offer"></span>% Off</p>
         </div>
+
+        <hr />
+
+        <div id="color-container">
+          <div id="color-title">Choose a Color</div>
+          <div id="color-selects"></div>
+        </div>
+
+        <hr />
+
+        <div id="size-container">
+          <div id="size-title">Choose a Size</div>
+          <div id="size-selects"></div>
+        </div>
+
+        <div id="cart-container">
+          <div class="counter">
+            <span id="decrease">-</span>
+            <input
+              type="number"
+              id="quantity-input"
+              value="1"
+              min="1"
+              readonly
+            />
+            <span id="increase">+</span>
+          </div>
+          <button id="add-to-cart">Add To Cart</button>
+        </div>
+
+        <div id="notification" style="display: none"></div>
+
+        <hr />
+
+        <div id="description-container">
+          <div id="description"></div>
+        </div>
+      </div>
     </div>
 
     <script src="./script.js"></script>
-    <script src="https://kit.fontawesome.com/acd31a11c2.js" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/acd31a11c2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
